@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var lessMiddleware = require('less-middleware');
 //handlebars engine
 var hbs = require('express-handlebars');
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var app = express();
