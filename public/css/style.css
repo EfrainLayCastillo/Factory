@@ -40,7 +40,11 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 /*about us*/
 
 
-
+.title_sadboy{
+	font-family: 'Caveat Brush', cursive;
+	font-size: 6rem;
+	text-align: center;
+}
 
 
 
