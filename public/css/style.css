@@ -1,126 +1,129 @@
-a{color:#00a9c6; text-decoration:none;}
-a:hover{color:#666;}
-.btn,a,.btn:hover,a:hover {
--webkit-transition: all 0.3s ease-in-out;
--moz-transition: all 0.3s ease-in-out;
--ms-transition: all 0.3s ease-in-out;
--o-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
-outline: none !important;
+.navbar_main{
+  min-height: 75px;
+  margin-bottom: 0;
 }
-
-
-p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
-
-.spacer{padding: 6em 0;}
-
-.btn{border:none;border-radius: 0;padding: 1em 4em;background: rgba(0,0,0,0.5);text-transform: uppercase;}
-.btn:hover,.btn:active{color: #fff;}
-.btn-default{color: #ccc;border: 1px solid #aaa;}
-.btn-default:hover,.btn-default:active{background: rgba(0,0,0,0.8);}
-.btn-primary{color: #fff;background:#00a9c6;width: 100%;outline: none;}
-.btn-primary:hover,.btn-primary:active,.btn-primary:focus{background:#1BC0DC;box-shadow: none;}
-
-/*works*/
-#works figcaption a{border:1px solid #fff;margin-top: 1em;display: inline-block;color: #fff;padding: 0 2em;}
-#works figcaption a:hover{text-decoration: none;padding: 0 3em;}
-/*works*/
-
-/*team*/
-.team figure{width: 100%;}
-.team img{width: 100%;}
-.team b{font-size: 1.2em;display: block;}
-.team a i.fa{color: #fff; font-size: 2em;}
-.team a i.fa:hover{color: #21abca;}
-
-
-.highlight-info{ background:url(../images/lab.jpg) center fixed; background-size: cover; color:#fff;}
-.highlight-info .overlay{background: rgba(33,171,202,0.5);}
-.highlight-info h4{color: #fff;margin:0.5em 0 0 0;}
-/*about us*/
-
-
-.title_sadboy{
-	font-family: 'Caveat Brush', cursive;
-	font-size: 6rem;
-	text-align: center;
+.collapse_main{
+  padding-top: 10px;
 }
-.font_boys{
-	font-family: 'Caveat Brush', cursive;
+.navbar_brand_main{
+  padding-top: 28px;
 }
-.btn_sub{
-	text-align: center;
+/* footer */
+.footer_main{
+  padding-top: 60px;
+  padding-bottom: 30px;
+  background: #333;
 }
-
-
-
-
-
-
-/*contact*/
-#contact{background-color: #f5f5f5;}
-.contactform textarea,.contactform input{width: 100%;padding:1em;border:1px solid #ccc;margin-bottom: 1em;border-radius: 0;outline: none;}
-/*contact*/
-
-
-.footer{background-color: #111; color: #fff; font-size: 1em;color: #aaa;}
-.footer a{color: #aaa;margin: 0 1em; }
-
-.gototop{position: fixed;bottom: 20px; right: 20px;background: rgba(0,0,0,0.5);padding: 10px;color: #fff;}
-.gototop i{line-height: 0.5em;}
-
-
-@media (max-width: 1200px) {
-	body{font:300 13px/13px Roboto,Arial,Helvetica;}
-	.navbar-brand{padding-top: 11px;}
-	.process ul li{margin:0 0.5em; }
-
-	.grid figure h2{font: 700 1.5em Roboto,Arial,Helvetica;}
-	figure.effect-oscar figcaption{padding: 12%;}
-	figure.effect-oscar figcaption::before,figure.effect-chico figcaption::before{top: 20px;right: 20px;bottom: 20px;left: 20px;}
-
-	.partners img{margin: 0 25px 25px 0;}
+.footer_main h3{
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
 }
-
-@media (max-width: 900px) {
-	h1{font: 700 3.5em Roboto,Arial,Helvetica;}
-	h4 {font: 300 1.3em Roboto,Arial,Helvetica;}
-	.btn{padding: 1em 2em;}
-	.partners img{margin: 0 15px 25px 0;width: 157px;}
-	.process ul li{width: 9em;height: 9em;}
-	figure.effect-chico figcaption {padding: 2em;}
-	figure.effect-oscar figcaption {padding: 20%;}
-	figure.effect-chico figcaption::before{top: 10px;right: 10px;bottom: 10px;left: 10px;}
-	.grid figure.effect-chico p{font-size: 0.6em;line-height: 1.5em;}
+.footer_main p{
+  color: #D3D3D3;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
 }
+.footer_main ul{
+  padding-left: 10px;
+}
+.footer_main ul li{
+  padding-bottom: 10px;
+  font-size: 14px;
+}
+.footer_main ul li a{
+  color: white;
+  list-style: none;
+}
+.footer_main ul li a:hover{
+  text-decoration: none;
+  color: #D3D3D3;
+}
+.authors_promotion{
+  width: 100%;
+  height: 50px;
+  background: #242424;
+}
+.authors_promotion span{
+  color: #acacac;
+  line-height: 52px;
+}
+/* modal */
+.vide_modal{
+  width: 720px;
+}
+.modal_view{
+  background: transparent;
+  box-shadow:none;
+  border: 0;
+}
+.video_frame{
+  width: 100%;
+  min-height: 480px;
+}
+.close_custom{
+  font-size: 50px;
+  opacity: 1;
+  color: white;
+}
+.modal_header_custom{
+  padding: 0;
+}
+.box_padd{
+  padding: 5% 5% 5% 15%;
+}
+/* Banner */
+.banner_section{
+    background: #222;
+    text-align: center;
 
-
-@media (max-width: 767px) {
-	body{font:300 12px/12px Roboto,Arial,Helvetica;}
-	.navbar-nav > li > a {line-height: 1em;}
-	.navbar-brand{padding: 7px;}
-	.navbar-brand img{height: 37px;}
-	.navbar-toggle{margin-top: 12px;}
-
-	.carousel-caption,.carousel-control,.carousel-indicators{display: none;}
-
-	h2.text-center{text-align: left;font-size: 1.7em;}
-	h4 {font: 300 1.2em Roboto,Arial,Helvetica;}
-	#partners h2{padding: 0 1em;}
-	#works {padding-top: 5em;}
-
-	.partners{display: block;float: left;}
-	.partners img{width: 120px;}
-
-
-
-	.about.spacer{padding-left: 2em;padding-right: 2em;}
-	.spacer{padding:2em 0 0 0;}
-	.process ul li{margin-bottom: 1em;}
-
-	.highlight-info .overlay{padding-bottom: 2em;}
-
-	.grid.team div{margin: 0;padding: 0;}
-	figure.effect-chico figcaption {padding: 1.5em;}
-	.footer{margin-top: 2em;padding-bottom: 2em;}
+}
+.container_padd{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.banner_section .main_title{
+  color: white;
+  font-size: 36px;
+  letter-spacing: -1.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.banner_section .main_title::before{
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  content: '';
+  vertical-align: middle;
+  background: rgba(255,255,255,0.5);
+  margin-right: 10px;
+}
+.banner_section .main_title::after{
+      margin-left: 10px;
+      display: inline-block;
+      width: 50px;
+      height: 1px;
+      content: '';
+      vertical-align: middle;
+      background: rgba(255,255,255,0.5);
+}
+.banner_section .sub_title{
+    color: white;
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+.dotok{
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 2px;
+}
+/* Mercancia */
+.merca_bloque{
+  background: #4169E1;
 }
