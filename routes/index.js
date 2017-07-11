@@ -35,4 +35,9 @@ router.route('/newsletter')
           }
       });
     });
+    // OAC PAGE ROUTE
+    router.get('/oac', function(req, res, next) {
+      res.render('documentacion/oac');
+    });
+
 module.exports = router;

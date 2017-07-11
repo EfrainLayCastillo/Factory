@@ -1,3 +1,14 @@
+/*general*/
+.withoutpadd{
+  padding: 0;
+}
+.withoutmarg{
+  margin: 0;
+}
+.position_right{
+  text-align: right;
+}
+/*menu header*/
 .navbar_main{
   min-height: 75px;
   margin-bottom: 0;
@@ -73,6 +84,14 @@
 .box_padd{
   padding: 5% 5% 5% 15%;
 }
+.cartagena_background{
+  width: 100%;
+  height: 450px;
+  background-image: url(../img/video_thumbnail/cartagena.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 /* Banner */
 .banner_section{
     background: #222;
@@ -125,5 +144,57 @@
 }
 /* Mercancia */
 .merca_bloque{
-  background: #4169E1;
+  background-image: url(../img/background_section/wallstreet.jpg);
+  width: 100%;
+  background-size: cover;
+  height: 450px;
+  padding: 40px 20px;
+  background-repeat: no-repeat;
+}
+.seccion_content{
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+.border_block{
+  border: 1px solid white;
+  display: inline-block;
+}
+.border_frame{
+  border: 1px solid white;
+  z-index: 9999999;
+  position: absolute;
+  width: 96%;
+  height: 415px;
+  margin: 15px;
+}
+/* documentacion */
+.oac{
+  padding: 0 0 100px 0;
+}
+.documentacion_bck_oac{
+  background-image: url(../img/documentacion/coffee.jpg);
+  width: 100%;
+  height: 320px;
+  background-size: cover;
+  z-index: -1;
+}
+.content_documentacion{
+  position: relative;
+  bottom: 200px;
+  left: 200px;
+}
+.content_documentacion h2{
+  color: white;
+  font-size: 34px;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -1.5px;
+  margin-bottom: 5px;
+}
+.barra_title{
+  border-top: 1px solid #DC143C;
+  float: left;
+  width: 5%;
+  margin: 0;
+  border-width: 2px;
 }
