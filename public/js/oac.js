@@ -18,23 +18,7 @@ function compilar(){
     buscador.push($.trim(cortes[i]));
       }
   }
-  var supa = [];
-  var tolda;
-  var cantidadletraporlinea;
-
-  var eje1 = [];
-  var defrag = [];
-  var letrasporlinea = [];
-      for (var b = 0; b < caja_grande.length; b++) {
-        eje1[b] = caja_grande[b];
-        defrag = eje1.toString().split(" ");
-        letrasporlinea[b] = defrag[b];
-      }
-
-  console.log("Array con el contenido del text area " + buscador);
-  console.log("letras: " + letrasporlinea);
-  //console.log("esto es el supa: " + supa);
-  //console.log("Esta es la cantidad de letra por linea: " + cantidadletraporlinea);
+  console.log("esto es el buscador: " + buscador);
 
 // -----------------------------------------------------------------------------------------------------//
   var titulo = document.getElementById('titulo').value;
@@ -96,16 +80,24 @@ var sumando = 0;
     }
   }
   console.log("Resultado encontrado: " + resultadoencontrado);
-var impresion_separada = [];
+var impresion_separada;
 var count = 0;
-for (var p = 0; p < resultadoencontrado.length; p++) {
-    impresion_separada[p] = String(resultadoencontrado[count] + resultadoencontrado[count+1] + resultadoencontrado[count+2] + resultadoencontrado[count+3]);
+var locura ;
+var prelocura = [];
+for (var p = 0; p < buscador.length; p++) {
+
+    impresion_separada = resultadoencontrado.join("");
+    locura = impresion_separada.split(";");
+    prelocura[p] = locura.toString();
     //impresion_separada[p] = resultadoencontrado.join("") + "";
     count = count + 1;
   }
   console.log("Caja Grande tiene separado: " + caja_grande.length);
   console.log("Impresion separa: " + impresion_separada);
-  document.getElementById('result').innerHTML = "v2.0 raw" +"</br>" + impresion_separada.join("\n");
+  console.log("locura: " + locura);
+  console.log("locura: " + prelocura);
+
+  document.getElementById('result').innerHTML = "v2.0 raw" +"</br>" + resultadoencontrado.join(" ");
   /*for (var p = 0; p < buscador.length; p++) {
     if (buscador[p] === ";") {
       document.getElementById('result').innerHTML = resultadoencontrado.join("\n");
@@ -118,10 +110,9 @@ for (var p = 0; p < resultadoencontrado.length; p++) {
 
 
   document.getElementById('programa').innerHTML = titulo;
-
-
-
+var k = JSON.stringify(resultadoencontrado);
+console.log(k);
 //Impresion de archivo
-  //var blob = new Blob(impresion_separada, {type: "text/plain;charset=utf-8"});
-  //saveAs(blob, titulo + ".txt");
+  var blob = new Blob(resultadoencontrado, {type: "text/plain;charset=utf-8"});
+  saveAs(blob, titulo + ".txt");
 }
