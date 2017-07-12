@@ -24,10 +24,13 @@
             <input type="text" class="form-control" value="" placeholder="txtDogs" id="titulo">
           </div>
           <div class="form-group">
+            <h5>ADD SUB OR AND JMP BRA JR SPC R0 R1 R2 R3 R12 R14</h5>
+          </div>
+          <div class="form-group">
             <label for="exampleInputPassword1">Assembler Code</label>
             <textarea class="form-control" rows="8" id="content"></textarea>
           </div>
-          <button onclick="compilar();" class="btn btn-info">Guardar en txt</button>
+          <button id="guardar" onclick="compilar();" class="btn btn-info">Guardar en txt</button>
       </div>
       <div class="col-md-6">
         <h1 id="programa"></h1>
