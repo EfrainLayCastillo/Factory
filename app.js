@@ -15,14 +15,14 @@ var app = express();
 //DB server connection
 
 var llave = "mongodb://efrainlay:bebeto23marzo@cluster0-shard-00-00-cfab5.mongodb.net:27017,cluster0-shard-00-01-cfab5.mongodb.net:27017,cluster0-shard-00-02-cfab5.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin";
-mongoose.connect(llave,  function(err, db){
+/*mongoose.connect(llave,  function(err, db){
     if (!err) {
       console.log("MongoBD Entrando");
     }else {
       console.log("Error de conexion");
     }
 
-});
+});*/
 
 //Engine of Handlebars
 app.engine('.hbs', hbs({

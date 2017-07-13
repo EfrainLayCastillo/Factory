@@ -66,38 +66,26 @@ var sumando = 0;
   for (var f = 0; f < buscador.length; f++) {
     for (var r = 0; r < movimiento.length; r++) {
 
-      if ((buscador[f] === movimiento[r][0]) || (buscador[f] === registro[r][0])) {
-        resultadoencontrado[f] = movimiento[r][1];
-        sumando++;
+        if ((buscador[f] === movimiento[r][0]) || (buscador[f] === registro[r][0])) {
+          resultadoencontrado[f] = movimiento[r][1];
+          sumando++;
 
-      }else if ((buscador[f] !== movimiento[r][0]) || (buscador[f] !== registro[r][0])){
-        //resultadoencontrado[sumando] = q;
-        //sumando++;
+        }else if((buscador[f] !== movimiento[r][0]) || (buscador[f] !== registro[r][0])){
+          console.log("NO SE ENCONTRO COMPARACION");
+        }
       }
     }
-    if (typeof(buscador[f]) === undefined){
-      buscador[f] = "x";
+    for (var l = 0; l < resultadoencontrado.length; l++) {
+      if (resultadoencontrado[l] == "") {
+        resultadoencontrado[l] === '\n';
+        console.log("Cambios: " + resultadoencontrado[l]);
+      }else {
+        console.log("no entro");
+      }
     }
-  }
   console.log("Resultado encontrado: " + resultadoencontrado);
-var impresion_separada;
-var count = 0;
-var locura ;
-var prelocura = [];
-for (var p = 0; p < buscador.length; p++) {
 
-    impresion_separada = resultadoencontrado.join("");
-    locura = impresion_separada.split(";");
-    prelocura[p] = locura.toString();
-    //impresion_separada[p] = resultadoencontrado.join("") + "";
-    count = count + 1;
-  }
-  console.log("Caja Grande tiene separado: " + caja_grande.length);
-  console.log("Impresion separa: " + impresion_separada);
-  console.log("locura: " + locura);
-  console.log("locura: " + prelocura);
-
-  document.getElementById('result').innerHTML = "v2.0 raw" +"</br>" + resultadoencontrado.join(" ");
+  document.getElementById('result').innerHTML = "v2.0 raw" +"</br>" + resultadoencontrado.join("");
   /*for (var p = 0; p < buscador.length; p++) {
     if (buscador[p] === ";") {
       document.getElementById('result').innerHTML = resultadoencontrado.join("\n");
@@ -110,9 +98,8 @@ for (var p = 0; p < buscador.length; p++) {
 
 
   document.getElementById('programa').innerHTML = titulo;
-var k = JSON.stringify(resultadoencontrado);
-console.log(k);
 //Impresion de archivo
   var blob = new Blob(resultadoencontrado, {type: "text/plain;charset=utf-8"});
   saveAs(blob, titulo + ".txt");
+  // Ingresar El "\n" en el array para poder separar
 }
