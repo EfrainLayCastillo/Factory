@@ -18,6 +18,10 @@ function compilar(){
     buscador.push($.trim(cortes[i]));
       }
   }
+
+
+
+
   console.log("esto es el buscador: " + buscador);
 
 // -----------------------------------------------------------------------------------------------------//
@@ -39,7 +43,23 @@ function compilar(){
       ["JMP", "C"],
       ["BRA", "D"],
       ["JR", "E"],
-      ["SPC", "F"]
+      ["SPC", "F"],
+      ["X", "0"],
+      ["1", "1"],
+      ["2", "2"],
+      ["3", "3"],
+      ["4", "4"],
+      ["5", "5"],
+      ["6", "6"],
+      ["7","7"],
+      ["8", "8"],
+      ["9", "9"],
+      ["10", "A"],
+      ["11", "B"],
+      ["12", "C"],
+      ["13", "D"],
+      ["14", "E"],
+      ["15", "F"]
     ];
   var registro = [
     ["R0", "0"],
@@ -57,33 +77,59 @@ function compilar(){
     ["R12", "C"],
     ["R13", "D"],
     ["R14", "E"],
-    ["R15", "F"]
+    ["R15", "F"],
+    ["X", "0"],
+    ["1", "1"],
+    ["2", "2"],
+    ["3", "3"],
+    ["4", "4"],
+    ["5", "5"],
+    ["6", "6"],
+    ["7","7"],
+    ["8", "8"],
+    ["9", "9"],
+    ["10", "A"],
+    ["11", "B"],
+    ["12", "C"],
+    ["13", "D"],
+    ["14", "E"],
+    ["15", "F"]
   ];
 
-var q = "x";
+var q = "\n";
 var sumando = 0;
+var buscadorcount = 0;
   //METODO DE COMPRACION ENTRE ARREGLOS
   for (var f = 0; f < buscador.length; f++) {
+
+
     for (var r = 0; r < movimiento.length; r++) {
 
-        if ((buscador[f] === movimiento[r][0]) || (buscador[f] === registro[r][0])) {
+        if ((buscador[f] === movimiento[r][0]) || (buscador[f] === registro[r][0]) ) {
           resultadoencontrado[f] = movimiento[r][1];
-          sumando++;
-
-        }else if((buscador[f] !== movimiento[r][0]) || (buscador[f] !== registro[r][0])){
+          //console.log("Se encontro comparaciones con: " + resultadoencontrado[f]);
+        }else if((buscador[f] !== movimiento[r][1]) || (buscador[f] !== registro[r][1])){
+          resultadoencontrado[sumando] = q ;
           console.log("NO SE ENCONTRO COMPARACION");
+          sumando++;
         }
       }
+
+
     }
+  /*var local = [];
     for (var l = 0; l < resultadoencontrado.length; l++) {
-      if (resultadoencontrado[l] == "") {
-        resultadoencontrado[l] === '\n';
+      if ((resultadoencontrado[l] !== movimiento)) {
+        resultadoencontrado[l] ='\n';
         console.log("Cambios: " + resultadoencontrado[l]);
+        local[l] = resultadoencontrado[l];
       }else {
         console.log("no entro");
       }
-    }
-  console.log("Resultado encontrado: " + resultadoencontrado);
+    }*/
+  //console.log("Resultado encontrado: " + resultadoencontrado);
+//  console.log("String: " + String(resultadoencontrado));
+  //console.log("LOCAL: " + local);
 
   document.getElementById('result').innerHTML = "v2.0 raw" +"</br>" + resultadoencontrado.join("");
   /*for (var p = 0; p < buscador.length; p++) {
@@ -100,6 +146,6 @@ var sumando = 0;
   document.getElementById('programa').innerHTML = titulo;
 //Impresion de archivo
   var blob = new Blob(resultadoencontrado, {type: "text/plain;charset=utf-8"});
-  saveAs(blob, titulo + ".txt");
+  saveAs(blob, titulo + ".ex");
   // Ingresar El "\n" en el array para poder separar
 }
