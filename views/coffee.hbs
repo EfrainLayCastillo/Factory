@@ -1,0 +1,72 @@
+<div class="bck_coffee">
+  {{> block/header }}
+
+  <div class="container content_main">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="h2_title">REGISTRATE</h2>
+        <form class="register" action="/registro" method="post">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="text">Name</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name" name="name">
+            </div>
+          </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="text">Last Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Last Name" name="lastname">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="text">Age</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Age" name="Age">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="text">Country</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Country" name="country">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="text">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" name="email">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+              </div>
+            </div>
+            <div class="col-md-12" style="text-align:center;">
+              <button type="submit" class="btn btn-primary">Sign up</button>
+            </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h2 class="h2_title">INICIA SESIÓN</h2>
+        <form class="register" action="" method="post">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="text">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+            </div>
+            <div class="col-md-12" style="text-align:center;">
+              <button type="submit" class="btn btn-info">Sign in</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

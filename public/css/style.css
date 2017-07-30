@@ -1,200 +1,77 @@
-/*general*/
-.withoutpadd{
-  padding: 0;
-}
-.withoutmarg{
-  margin: 0;
-}
-.position_right{
-  text-align: right;
-}
-/*menu header*/
-.navbar_main{
-  min-height: 75px;
-  margin-bottom: 0;
-}
-.collapse_main{
-  padding-top: 10px;
-}
-.navbar_brand_main{
-  padding-top: 28px;
-}
-/* footer */
-.footer_main{
-  padding-top: 60px;
-  padding-bottom: 30px;
-  background: #333;
-}
-.footer_main h3{
-  color: white;
-  font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
-  font-size: 15px;
-}
-.footer_main p{
-  color: #D3D3D3;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-}
-.footer_main ul{
-  padding-left: 10px;
-}
-.footer_main ul li{
-  padding-bottom: 10px;
-  font-size: 14px;
-}
-.footer_main ul li a{
-  color: white;
-  list-style: none;
-}
-.footer_main ul li a:hover{
-  text-decoration: none;
-  color: #D3D3D3;
-}
-.authors_promotion{
+.bck_main{
+  background-image: url(/img/bck1.jpg);
   width: 100%;
-  height: 50px;
-  background: #242424;
-}
-.authors_promotion span{
-  color: #acacac;
-  line-height: 52px;
-}
-/* modal */
-.vide_modal{
-  width: 720px;
-}
-.modal_view{
-  background: transparent;
-  box-shadow:none;
-  border: 0;
-}
-.video_frame{
-  width: 100%;
-  min-height: 480px;
-}
-.close_custom{
-  font-size: 50px;
-  opacity: 1;
-  color: white;
-}
-.modal_header_custom{
-  padding: 0;
-}
-.box_padd{
-  padding: 5% 5% 5% 15%;
-}
-.cartagena_background{
-  width: 100%;
-  height: 450px;
-  background-image: url(../img/video_thumbnail/cartagena.jpg);
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-position: center center;
-  background-repeat: no-repeat;
-}
-/* Banner */
-.banner_section{
-    background: #222;
-    text-align: center;
-
-}
-.container_padd{
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-.banner_section .main_title{
-  color: white;
-  font-size: 36px;
-  letter-spacing: -1.5px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.banner_section .main_title::before{
-  display: inline-block;
-  width: 50px;
-  height: 1px;
-  content: '';
-  vertical-align: middle;
-  background: rgba(255,255,255,0.5);
-  margin-right: 10px;
-}
-.banner_section .main_title::after{
-      margin-left: 10px;
-      display: inline-block;
-      width: 50px;
-      height: 1px;
-      content: '';
-      vertical-align: middle;
-      background: rgba(255,255,255,0.5);
-}
-.banner_section .sub_title{
-    color: white;
-    font-size: 16px;
-    font-weight: 100;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-.dotok{
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 2px;
-}
-/* Mercancia */
-.merca_bloque{
-  background-image: url(../img/background_section/wallstreet.jpg);
-  width: 100%;
   background-size: cover;
-  height: 450px;
-  padding: 40px 20px;
-  background-repeat: no-repeat;
-}
-.seccion_content{
-  padding-top: 30px;
-  padding-bottom: 60px;
-}
-.border_block{
-  border: 1px solid white;
-  display: inline-block;
-}
-.border_frame{
-  border: 1px solid white;
-  z-index: 9999999;
-  position: absolute;
-  width: 96%;
-  height: 415px;
-  margin: 15px;
-}
-/* documentacion */
-.oac{
-  padding: 0 0 100px 0;
-}
-.documentacion_bck_oac{
-  background-image: url(../img/documentacion/coffee.jpg);
-  width: 100%;
-  height: 320px;
-  background-size: cover;
+  min-height: 1024px;
   z-index: -1;
 }
-.content_documentacion{
-  position: relative;
-  bottom: 200px;
-  left: 200px;
-}
-.content_documentacion h2{
+
+/* navbar */
+.nav_title{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
   color: white;
-  font-size: 34px;
-  font-family: 'Lato', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: -1.5px;
-  margin-bottom: 5px;
 }
-.barra_title{
-  border-top: 1px solid #DC143C;
-  float: left;
-  width: 5%;
-  margin: 0;
+.nav_title:focus{
+  color: white;
+}
+.nav_title:hover{
+  color: white;
+  background-color: transparent !important;
+  border-bottom: 1px solid #00bcd4;
   border-width: 2px;
+}
+.navbar-collapse{
+  padding-top: 10px;
+}
+
+/* content index */
+.content_main{
+  padding-top: 100px;
+}
+.main_title{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 80px;
+  color: white;
+}
+.paragraph{
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+  font-size: 24px;
+  color: white;
+}
+.btn_bck{
+  text-align: center;
+  padding-top: 30px;
+}
+.btn_drink{
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  border-radius: 50px;
+}
+/* coffee */
+.bck_coffee  {
+  background-image: url(/img/coffee.jpg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  min-height: 1024px;
+  z-index: -1;
+}
+.h2_title{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 30px;
+  color: white;
+}
+.register label{
+  color: white;
+  font-family: 'Lato', sans-serif;
+
 }

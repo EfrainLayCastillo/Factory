@@ -3,9 +3,16 @@ var router = express.Router();
 // model BD mongodb
 var noticias = require('../models/newsletter.js');
 /* GET home page. */
+/* render */
+//home
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'SadBoys - Store' });
+  res.render('index', { title: 'CAFE CON SAL'});
 });
+//coffee
+router.get('/coffee', function(req, res, next){
+  res.render('coffee', {title: 'Coffee'})
+})
+
 
 
 router.route('/newsletter')
