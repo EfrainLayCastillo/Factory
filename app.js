@@ -8,8 +8,14 @@ var lessMiddleware = require('less-middleware');
 //handlebars engine
 var hbs = require('express-handlebars');
 var mongoose = require('mongoose');
+//routes - rutas
 var index = require('./routes/index');
 var users = require('./routes/users');
+var dashboard = require('./routes/dashboard');
+//middlewares
+var session_middleware = require('./middleware/session');
+//Pluggin - library
+var session = require('express-session');
 var app = express();
 
 //DB server connection
@@ -44,12 +50,20 @@ app.set('view engine', 'hbs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(session({
+  secret: "app1234",
+  resave: false,
+  saveUninitialized: false
+}));
 app.use(cookieParser());
 app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/dashboard', session_middleware);
 app.use('/', index);
+app.use('/dashboard', dashboard);
 app.use('/users', users);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
