@@ -8,7 +8,7 @@
   height: 100%;
   z-index: -1;
 }
-
+.padd{padding: 20px 0px;}
 /* navbar */
 .nav_title{
   font-family: 'Montserrat', sans-serif;
@@ -75,5 +75,50 @@
 .register label{
   color: white;
   font-family: 'Lato', sans-serif;
-
+}
+/* admin */
+.admin_section{
+  position: fixed;
+  bottom: 50%;
+  left: 25%;
+}
+/* -------------------------- Carrousel ------------*/
+.carrouse_store{
+  background-image: url(/img/bck2.jpg);
+  width: 100%;
+  min-height: 325px;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+}/* ---------------------------- Store -------------------------------- */
+.tile_Store{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 75px;
+  color: white;
+}
+.store_section{
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+.subline{
+  width: 25%;
+  height: 5px;
+  background-color: red;
+}
+.section_block{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.block_list{
+  list-style: none;
+}
+.block_list li{
+  float: left;
+  padding: 5px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.thumbnail img{
+  max-height: 350px;
 }

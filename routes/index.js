@@ -13,6 +13,12 @@ router.get('/', function(req, res, next) {
 router.get('/coffee', function(req, res, next){
   res.render('coffee', {title: 'Coffee'});
 });
+router.get('/admin', function(req, res, next){
+  res.render('admin', {title: 'Doggo Admin'});
+});
+router.get('/store', function(rq, res, next){
+  res.render('store',{title: 'Doggo Admin'});
+});
 
 // ----------------------------CRUD---------------------------------------
 
@@ -31,16 +37,13 @@ router.post('/registro', function(req, res, next){
       console.log(String(err));
     }else {
       console.log("User Registered");
-      res.redirect("/");
+      res.redirect("/coffee");
     }
   })
 });
 router.post('/iniciar', function(req, res, next){
   User.findOne({email: req.body.email, password: req.body.password}, function(err, user){
-    if (err) {
-      console.log(String("error en session" + err));
-      res.send("El usuario no se ha encontrado");
-    }else {
+    if (!err) {
       req.session.user_id = {
         id: user._id,
         name: user.name,
@@ -49,6 +52,9 @@ router.post('/iniciar', function(req, res, next){
       console.log("Inicio de sesion - nuevo usuario");
       console.log(user);
       res.redirect("/dashboard/home");
+    }else {
+      console.log(String("error en session" + err));
+      res.redirect("/");
     }
 
   });

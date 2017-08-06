@@ -2,7 +2,7 @@
 var User = require('../models/usersmodel');
 
 module.exports = function(req, res, next){
-  if (!req.session.user_id || req.session.user_id === undefined) {
+  if (!req.session.user_id) {
     res.redirect("/coffee");
   }else {
     User.findById(req.session.user_id.id, function(err, user){
